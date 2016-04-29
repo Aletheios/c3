@@ -33,6 +33,7 @@ c3_chart_internal_fn.redrawRegion = function (withTransition) {
             .attr("y", y)
             .attr("width", w)
             .attr("height", h)
+            .attr("data-additional", function(d){ return d.additional ? d.additional : ""; })
             .style("fill-opacity", function (d) { return isValue(d.opacity) ? d.opacity : 0.1; })
     ];
 };
